@@ -9,41 +9,57 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var numberGuess: UITextField!
-    @IBOutlet var GuessMade: UIView!
-    var numberToGuess = arc4random_uniform(501) // Generate a number between 0 and 500
+    
+    
+    // MARK:  Outlets
+    @IBOutlet weak var labelMessage: UILabel!
+    @IBOutlet weak var textFieldNumberGuess: UITextField!
+    
+    // MARK: Properties (var)
+    var game = GuessingGame ()
+    
+    // MARK : Oveerrides
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func guessMade( _ sender : Any ) {
-        print ("A guess was made")
-        print (numberGuess.text)
+    //    MARK : Actions
+    @IBAction func guessSubmitted(_ sender: Any) {
+        //        print the guess that was given
         
+        print (textFieldNumberGuess.text)
+        //        unwrap the text field's cotents
+        //        making sure that the text field is not containing a nil value
+        guard let inputGiven = textFieldNumberGuess.text else {
+            //            if we could not unwrap the optional, then quit the func
+            return
+        }
         // Make sure that the field had something in it
-        guard let inputGiven = numberGuess.text else {
-            // If the field had 'nil' (nothing), return
+        //        handle cases where the user enters text
+        guard let guessProvided = Int(inputGiven) else {
+            //            if we can't convert to an integer.
+            //            then quit and return
             return
         }
+        //        print the actual number that was given
+        print (guessProvided)
+        // print the number that needs to be guessed
+        print ("The number to be guessed is :")
+        print (game.numberToGuess)
         
-        // Convert the string into an Int
-        guard let guessMade = Int(inputGiven) else {
-            return
-        }
+        // MARK : Custom functions
         
-        //    compare the guess made to the secret number
-        if guessMade == numberToGuess {
-            print ("You got it")
-        }
-
+        // compare the guess provided to the number to be guessesd
+        //            if-else if-else
+        labelMessage.text = game.compareGuessToNumber (guessMade: guessProvided)
     }
 }
+
 

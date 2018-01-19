@@ -14,6 +14,7 @@
 		0CA3A596200D04DB00A3834F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CA3A594200D04DB00A3834F /* LaunchScreen.storyboard */; };
 		0CA3A5A1200D04DB00A3834F /* guessinggameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3A5A0200D04DB00A3834F /* guessinggameTests.swift */; };
 		0CA3A5AC200D04DB00A3834F /* guessinggameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3A5AB200D04DB00A3834F /* guessinggameUITests.swift */; };
+		0CC7AAB2200FBBBC001F03D5 /* guessing game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC7AAB1200FBBBC001F03D5 /* guessing game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0CA3A5A7200D04DB00A3834F /* guessinggameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = guessinggameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA3A5AB200D04DB00A3834F /* guessinggameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guessinggameUITests.swift; sourceTree = "<group>"; };
 		0CA3A5AD200D04DB00A3834F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CC7AAB1200FBBBC001F03D5 /* guessing game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "guessing game.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				0CA3A592200D04DB00A3834F /* Assets.xcassets */,
 				0CA3A594200D04DB00A3834F /* LaunchScreen.storyboard */,
 				0CA3A597200D04DB00A3834F /* Info.plist */,
+				0CC7AAB1200FBBBC001F03D5 /* guessing game.swift */,
 			);
 			path = guessinggame;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA3A58E200D04DB00A3834F /* ViewController.swift in Sources */,
+				0CC7AAB2200FBBBC001F03D5 /* guessing game.swift in Sources */,
 				0CA3A58C200D04DB00A3834F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
